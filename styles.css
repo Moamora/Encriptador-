@@ -1,0 +1,661 @@
+/* Reset de márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #f3f5fc;
+}
+
+.texto {
+  position: absolute;
+  width: 42%;
+  height: 60%;
+  left: 12%;
+  top: 15%;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  background-color: #f3f5fc;
+}
+
+.texto::placeholder {
+  color: #0a3871;
+}
+
+.texto:focus,
+.texto:active {
+  border: none;
+  outline: none;
+}
+
+.terminos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 80%;
+}
+
+.terminos p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+  opacity: 0.8;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Alinea los botones verticalmente al centro */
+  padding: 1% 0;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 90%; /* Ajuste para que los botones se posicionen por encima del recuadro blanco */
+  gap: 24px; /* Agregamos esta línea para separar los botones */
+}
+
+.btn-encriptar, .btn-desencriptar, .btn-copiar {
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  gap: 8px;
+  width: 25%;
+  border-radius: 24px;
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-encriptar {
+  background-color: #0a3871; /* Color de fondo para el botón de encriptar */
+}
+
+.btn-desencriptar {
+  box-sizing: border-box;
+  background: #d8dfe8; /* Color de fondo para el botón de desencriptar */
+  border: 1px solid #0a3871;
+  color: #0a3871;
+}
+
+.btn-copiar {
+  background-color: #0a3871; /* Color de fondo para el botón de copiar */
+  margin-left: 100px; /* Ajusta este valor según sea necesario */
+}
+
+.btn-desencriptar:hover,
+.btn-encriptar:hover,
+.btn-copiar:hover {
+  
+  width: 24.5%;
+  padding: 1.8%;
+}
+
+.encriptado {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 25%; /* Reducido tamaño del recuadro blanco */
+  height: 80%; /* Ajustado para reducir altura */
+  left: 60%;
+  top: 10%; /* Ajuste para separar del borde superior */
+  background: #fff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+}
+
+.mensaje-encriptado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  gap: 16px;
+  position: absolute;
+  width: 100%;
+  top: 45%; /* Ajuste para acomodar los botones */
+  text-align: center;
+}
+
+.mensaje-encriptado h2 {
+  width: 60%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  color: #343a40;
+}
+
+.mensaje-encriptado p {
+  width: 80%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #495057;
+}
+
+.encriptado img {
+  position: absolute;
+  width: 60%; /* Reducido tamaño de la imagen */
+  height: auto; /* Ajuste automático de altura */
+  top: 10%; /* Ajuste para separar del borde superior */
+}
+@media (max-width: 390px) and (max-height: 896px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .encriptar {
+    width: 100%;
+  }
+
+  .texto {
+    width: 90%;
+    height: 50%;
+    left: 5%;
+    top: 5%;
+  }
+
+  .terminos {
+    width: 90%;
+    left: 5%;
+    top: 57%;
+  }
+
+  .terminos p {
+    font-size: 14px;
+  }
+
+  .botones {
+    display: flex;
+    flex-direction: row; /* Asegura que los botones estén en una fila */
+    justify-content: center; /* Centra los botones horizontalmente */
+    width: 10%; /* Ancho total del contenedor */
+    gap: 0 px; /* Espacio mínimo entre los botones */
+    padding: 0; /* Sin padding horizontal adicional */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar,
+  .btn-copiar {
+    width: 10%; /* Ancho ajustado para cada botón */
+    border-radius: 24px;
+    padding: 8px; /* Ajusta el relleno para que se ajuste mejor */
+    font-family: "Inter";
+    font-size: 14px; /* Tamaño de fuente reducido */
+    text-align: center;
+  }
+
+  .btn-encriptar {
+    background-color: #0a3871; /* Color de fondo para el botón de encriptar */
+    color: #fff; /* Color del texto */
+  }
+
+  .btn-desencriptar {
+    background: #d8dfe8; /* Color de fondo para el botón de desencriptar */
+    color: #0a3871; /* Color del texto */
+    border: 1px solid #0a3871; /* Borde del botón */
+  }
+
+  .btn-copiar {
+    background-color: #0a3871; /* Color de fondo para el botón de copiar */
+    color: #fff; /* Color del texto */
+  }
+
+  .btn-encriptar:hover,
+  .btn-desencriptar:hover,
+  .btn-copiar:hover {
+    background-color: #094c8c; /* Color de fondo al pasar el ratón */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+  }
+
+  .encriptado {
+    width: 90%; /* Ancho ajustado para pantallas pequeñas */
+    left: 5%; /* Centrado horizontal */
+    margin-top: 20%; /* Margen superior reducido */
+    background: #fff;
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 5px; /* Relleno interior reducido */
+    height: 100px; /* Ajusta la altura automáticamente */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+  }
+
+  .mensaje-encriptado {
+    width: 100%;
+    padding-top: 10px; /* Espacio superior reducido */
+    top: 90%; /* Ajuste para subir el mensaje */
+  }
+
+  .encriptado img {
+    display: none; /* Oculta la imagen en pantallas pequeñas */
+  }
+
+  .btn-copiar {
+    margin-top: 100px; /* Espacio superior reducido */
+    margin-left: 50px; /* Sin margen izquierdo */
+  }
+}
+
+
+@media (max-width: 57.5em) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .encriptar {
+    width: 100%;
+  }
+
+  .texto {
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 5%;
+  }
+
+  .terminos {
+    width: 80%;
+    left: 10%;
+    top: 67%;
+  }
+
+  .terminos p {
+    font-size: 16px;
+  }
+
+  .botones {
+    display: flex;
+    flex-direction: row; /* Asegura que los botones estén en una fila */
+    justify-content: space-evenly; /* Espacio igual entre los botones */
+    width: 100%; /* Ancho total del contenedor */
+    gap: 0 px; /* Espacio mínimo entre los botones */
+    padding: 0 230px; /* Espacio horizontal dentro del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar,
+  .btn-copiar {
+    flex: 1; /* Distribuye el espacio de los botones de manera uniforme */
+    max-width: 100px; /* Ancho máximo para los botones */
+    padding: 8px; /* Espacio interno de los botones */
+    text-align: center; /* Centra el texto dentro de los botones */
+    border-radius: 6px; /* Bordes redondeados */
+    font-family: "Inter", sans-serif;
+    font-size: 14px; /* Tamaño de fuente reducido */
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho total */
+  }
+
+  .btn-encriptar {
+    background-color: #0a3871;
+    color: #fff;
+  }
+
+  .btn-desencriptar {
+    background-color: #d8dfe8;
+    color: #0a3871;
+    border: 1px solid #0a3871;
+  }
+
+  .btn-copiar {
+    background-color: #0a3871;
+    color: #fff;
+    margin-top: 20px; /* Espacio extra para el botón de copiar */
+  }
+
+  .btn-encriptar:hover,
+  .btn-desencriptar:hover,
+  .btn-copiar:hover {
+    background-color: #094c8c;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+  }
+
+  .encriptado {
+    width: 60%; /* Ancho ajustado */
+    left: 20%; /* Centrado horizontal */
+    margin-top: 30%; /* Margen superior */
+    background: #fff;
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 5px; /* Reduce el relleno interior */
+    height: 300px; /* Ajusta la altura fija */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+  }
+
+  .mensaje-encriptado {
+    width: 100%;
+    padding-top: 20px; /* Espacio superior */
+    top: 50%; /* Ajuste para subir el mensaje */
+  }
+
+  .encriptado img {
+    display: none; /* Oculta la imagen en pantallas pequeñas */
+  }
+}
+
+
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .encriptar {
+    width: 100%;
+  }
+
+  .texto {
+    width: 90%;
+    height: 50%;
+    left: 5%;
+    top: 5%;
+  }
+
+  .terminos {
+    width: 90%;
+    left: 5%;
+    top: 57%;
+  }
+
+  .terminos p {
+    font-size: 14px;
+  }
+
+  .botones {
+    display: flex;
+    flex-direction: row; /* Asegura que los botones estén en una fila */
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    width: 100%; /* Ancho total del contenedor */
+    gap: 5px; /* Espacio pequeño entre los botones para mantenerlos juntos */
+    padding: 0; /* Sin padding horizontal adicional */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar,
+  .btn-copiar {
+    width: 30%; /* Ancho ajustado para que los botones se adapten en pantalla pequeña */
+    border-radius: 24px;
+    padding: 8px; /* Ajusta el relleno para que se ajuste mejor */
+    font-family: "Inter";
+    font-size: 14px; /* Tamaño de fuente reducido */
+    text-align: center;
+  }
+
+  .btn-encriptar {
+    background-color: #0a3871; /* Color de fondo para el botón de encriptar */
+    color: #fff; /* Color del texto */
+  }
+
+  .btn-desencriptar {
+    background: #d8dfe8; /* Color de fondo para el botón de desencriptar */
+    color: #0a3871; /* Color del texto */
+    border: 1px solid #0a3871; /* Borde del botón */
+  }
+
+  .btn-copiar {
+    background-color: #0a3871; /* Color de fondo para el botón de copiar */
+    color: #fff; /* Color del texto */
+  }
+
+  .btn-encriptar:hover,
+  .btn-desencriptar:hover,
+  .btn-copiar:hover {
+    background-color: #094c8c; /* Color de fondo al pasar el ratón */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+  }
+
+  .encriptado {
+    width: 90%; /* Ancho ajustado para pantallas pequeñas */
+    left: 5%; /* Centrado horizontal */
+    margin-top: 20%; /* Margen superior reducido */
+    background: #fff;
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 5px; /* Relleno interior reducido */
+    height: 150px; /* Ajusta la altura automáticamente */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+  }
+
+  .mensaje-encriptado {
+    width: 100%;
+    padding-top: 10px; /* Espacio superior reducido */
+    top: 20%; /* Ajuste para subir el mensaje */
+  }
+
+  .encriptado img {
+    display: none; /* Oculta la imagen en pantallas pequeñas */
+  }
+
+  .btn-copiar {
+    /* Elimina cualquier margen que pueda estar empujando el botón fuera de la pantalla */
+    margin: 0;
+  }
+}
+@media (max-width: 414px) and (max-height: 896px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .encriptar {
+    width: 100%;
+  }
+
+  .texto {
+    width: 90%;
+    height: 50%;
+    left: 5%;
+    top: 5%;
+  }
+
+  .terminos {
+    width: 90%;
+    left: 5%;
+    top: 57%;
+  }
+
+  .terminos p {
+    font-size: 14px;
+  }
+
+  .botones {
+    display: flex;
+    flex-direction: row; /* Asegura que los botones estén en una fila */
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    width: 100%; /* Ancho total del contenedor */
+    gap: 5px; /* Espacio pequeño entre los botones para mantenerlos juntos */
+    padding: 0; /* Sin padding horizontal adicional */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar,
+  .btn-copiar {
+    width: 30%; /* Ancho ajustado para que los botones se adapten en pantalla pequeña */
+    border-radius: 24px;
+    padding: 8px; /* Ajusta el relleno para que se ajuste mejor */
+    font-family: "Inter";
+    font-size: 14px; /* Tamaño de fuente reducido */
+    text-align: center;
+  }
+
+  .btn-encriptar {
+    background-color: #0a3871; /* Color de fondo para el botón de encriptar */
+    color: #fff; /* Color del texto */
+  }
+
+  .btn-desencriptar {
+    background: #d8dfe8; /* Color de fondo para el botón de desencriptar */
+    color: #0a3871; /* Color del texto */
+    border: 1px solid #0a3871; /* Borde del botón */
+  }
+
+  .btn-copiar {
+    background-color: #0a3871; /* Color de fondo para el botón de copiar */
+    color: #fff; /* Color del texto */
+  }
+
+  .btn-encriptar:hover,
+  .btn-desencriptar:hover,
+  .btn-copiar:hover {
+    background-color: #094c8c; /* Color de fondo al pasar el ratón */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+  }
+
+  .encriptado {
+    width: 90%; /* Ancho ajustado para pantallas pequeñas */
+    left: 5%; /* Centrado horizontal */
+    margin-top: 20%; /* Margen superior reducido */
+    background: #fff;
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 5px; /* Relleno interior reducido */
+    height: 150px; /* Ajusta la altura automáticamente */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+  }
+
+  .mensaje-encriptado {
+    width: 100%;
+    padding-top: 10px; /* Espacio superior reducido */
+    top: 20%; /* Ajuste para subir el mensaje */
+  }
+
+  .encriptado img {
+    display: none; /* Oculta la imagen en pantallas pequeñas */
+  }
+
+  .btn-copiar {
+    /* Elimina cualquier margen que pueda estar empujando el botón fuera de la pantalla */
+    margin: 0;
+  }
+}
+@media (max-width: 430px) and (max-height: 932px)
+{
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .encriptar {
+    width: 100%;
+  }
+
+  .texto {
+    width: 90%;
+    height: 50%;
+    left: 5%;
+    top: 5%;
+  }
+
+  .terminos {
+    width: 90%;
+    left: 5%;
+    top: 57%;
+  }
+
+  .terminos p {
+    font-size: 14px;
+  }
+
+  .botones {
+    display: flex;
+    flex-direction: row; /* Asegura que los botones estén en una fila */
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    width: 100%; /* Ancho total del contenedor */
+    gap: 5px; /* Espacio pequeño entre los botones para mantenerlos juntos */
+    padding: 0; /* Sin padding horizontal adicional */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar,
+  .btn-copiar {
+    width: 30%; /* Ancho ajustado para que los botones se adapten en pantalla pequeña */
+    border-radius: 24px;
+    padding: 8px; /* Ajusta el relleno para que se ajuste mejor */
+    font-family: "Inter";
+    font-size: 14px; /* Tamaño de fuente reducido */
+    text-align: center;
+  }
+
+  .btn-encriptar {
+    background-color: #0a3871; /* Color de fondo para el botón de encriptar */
+    color: #fff; /* Color del texto */
+  }
+
+  .btn-desencriptar {
+    background: #d8dfe8; /* Color de fondo para el botón de desencriptar */
+    color: #0a3871; /* Color del texto */
+    border: 1px solid #0a3871; /* Borde del botón */
+  }
+
+  .btn-copiar {
+    background-color: #0a3871; /* Color de fondo para el botón de copiar */
+    color: #fff; /* Color del texto */
+  }
+
+  .btn-encriptar:hover,
+  .btn-desencriptar:hover,
+  .btn-copiar:hover {
+    background-color: #094c8c; /* Color de fondo al pasar el ratón */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+  }
+
+  .encriptado {
+    width: 90%; /* Ancho ajustado para pantallas pequeñas */
+    left: 5%; /* Centrado horizontal */
+    margin-top: 20%; /* Margen superior reducido */
+    background: #fff;
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 5px; /* Relleno interior reducido */
+    height: 150px; /* Ajusta la altura automáticamente */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+  }
+
+  .mensaje-encriptado {
+    width: 100%;
+    padding-top: 10px; /* Espacio superior reducido */
+    top: 20%; /* Ajuste para subir el mensaje */
+  }
+
+  .encriptado img {
+    display: none; /* Oculta la imagen en pantallas pequeñas */
+  }
+
+  .btn-copiar {
+    /* Elimina cualquier margen que pueda estar empujando el botón fuera de la pantalla */
+    margin: 0;
+  }
+}
+
